@@ -7,33 +7,53 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-      crossorigin="anonymous"
     />
-    <title>Item Lister</title>
+    <title>Multipurpose Item Lister</title>
   </head>
-  <body>
-    <header id="main-header" class="bg-success text-white p-4 mb-3">
+  <body
+    style="
+      background-color: #ddaf94;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    "
+  >
+    <header
+      id="main-header"
+      class="bg-success text-white p-4 mb-3"
+      style="background-color: white !important; color: black !important"
+    >
       <div class="container">
-        <h1 id="header-title">
-          Item Lister <span style="display: none">123</span>
-        </h1>
+        <h1 id="header-title">Multipurpose Item Lister</h1>
       </div>
     </header>
     <div class="container">
-      <div id="main" class="card card-body">
-        <h2 class="title">Add Items</h2>
-        <form class="form-inline mb-3">
-          <input type="text" class="form-control mr-2" />
-          <input type="submit" class="btn btn-dark" value="Submit" />
-        </form>
-        <h2 class="title">Items</h2>
-        <ul id="items" class="list-group">
-          <li class="list-group-item">Item 1</li>
-          <li class="list-group-item">Item 2</li>
-          <li class="list-group-item">Item 3</li>
-          <li class="list-group-item">Item 4</li>
-        </ul>
+      <div id="main" class="card card-body" style="background-color: #ddaf94">
+        <h2
+          class="title"
+          style="color: black !important"
+          style="text-align: center; font-weight: 900"
+        >
+          Add Item
+        </h2>
+        <label for="Item" id="form1">
+          <input
+            id="textValue"
+            type="text"
+            name="itemToAdd"
+            class="form-control mr-3"
+          />
+        </label>
+        <button id="btn-submit" class="btn btn-dark">Submit</button>
+        <br />
+        <br />
+
+        <h2 class="title" style="text-align: center">Items</h2>
+        <div id="Words">
+          <h3 id="aka" style="display: none"></h3>
+        </div>
+        <ul id="items" class="list-group"></ul>
+
+        <br />
+        <button id="btn-reset" class="btn btn-dark">Reset</button>
       </div>
     </div>
 

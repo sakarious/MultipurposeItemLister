@@ -1,14 +1,11 @@
-let textValue = document.querySelector('#textValue')
-let submit = document.querySelector('#btn-submit')
-let WordOutput = document.querySelector('#aka')
-let ResetButton = document.querySelector('#btn-reset')
-
-
-let TextLi = document.createTextNode(textValue.value)
+const textValue = document.querySelector('#textValue')
+const submit = document.querySelector('#btn-submit')
+const WordOutput = document.querySelector('#aka')
+const ResetButton = document.querySelector('#btn-reset')
 
 submit.addEventListener('click', () => {
     WordOutput.innerHTML = textValue.value;
-    console.log(textValue.value);
+    //console.log(textValue.value);
     let newLiElement = document.createElement('li')
     newLiElement.className = 'list-group-item'
 
@@ -18,16 +15,16 @@ submit.addEventListener('click', () => {
     newLiElement.appendChild(Litext);
     console.log(newLiElement);
 
-    let ul = document.querySelector('ul')
-    console.log(ul)
+    let HTMLul = document.querySelector('ul')
+    console.log(HTMLul)
 
-    let li = document.querySelector('li');
+    let HTMLli = document.querySelector('li');
 
-    ul.insertBefore(newLiElement, li)
+    HTMLul.insertBefore(newLiElement, HTMLli)
 
 });
 
 ResetButton.addEventListener('click', ()=>{
-    console.log('Reset button was clicked')
+    window.location.reload();
     
-})
+}) 
